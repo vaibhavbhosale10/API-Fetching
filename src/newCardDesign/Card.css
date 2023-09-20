@@ -1,0 +1,31 @@
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.card {
+  width: 200px;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+  overflow: hidden; /* Hide overflowing content */
+}
+
+.card p {
+  height: 0; /* Hide the content by default */
+  opacity: 0; /* Make the content transparent by default */
+  transition: height 0.3s, opacity 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover p {
+  height: auto; /* Allow the content to take its natural height on hover */
+  opacity: 1; /* Make the content fully visible on hover */
+  padding: 10px 0; /* Add padding for better appearance */
+}
